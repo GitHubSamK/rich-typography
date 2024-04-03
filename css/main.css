@@ -2,9 +2,16 @@
 a{
     color: #5dbea3;
 }
+
+article{
+    max-width: var(--max-width);
+    margin:0 auto;
+}
 :root {
     --base-font-size: 14px; 
     --scale-factor: 1.2; 
+    max-width: 2400px;
+    line-height: 1.2;
   }
 
   @media screen and (min-width: 720px) {
@@ -12,6 +19,7 @@ a{
       --base-font-size: 20px; 
     }
   }
+  
   
   h1 {
     font-size: calc(var(--base-font-size) * var(--scale-factor) * 2); 
@@ -26,7 +34,7 @@ a{
     margin-bottom: 1rem; 
   }
 .sectioncoralone p{
-    font-size: clamp(14px, 1vw, 16px);
+    font-size: clamp(14px, 1.5vw, 16px);
 }
 
 h3{
@@ -36,7 +44,7 @@ h3{
 
 body {
     font-size: var(--base-font-size); 
-    line-height: 1.5;
+    line-height: var(--line-height);
     background-color: white;
     margin: 0;
     padding: 0;
@@ -72,6 +80,18 @@ grid-column-gap: 10%;
         width: 320px;
         height: 240px;
     }
+
+    h1 {
+        font-size: calc(var(--base-font-size) * 2); 
+      }
+      
+      h2 {
+        font-size: calc(var(--base-font-size)* var(--scale-factor) ); 
+      }
+      h3 {
+        font-size: var(--base-font-size);
+      }
+
 }
 header {
     background-color: navy;
